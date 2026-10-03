@@ -1,1 +1,40 @@
-<p>Crea tu cuenta de Empresa</p>
+<h2>Crea tu cuenta de Empresa</h2>
+<h3>Únete a la red logística más segura y confiable del país.</h3>
+
+<div>
+  <h3>RUC*</h3>
+  <mat-form-field>
+    <mat-label>Ej. 20123456789</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <h3>Razón social*</h3>
+  <mat-form-field>
+    <mat-label>Ej. Logística Continental SAC</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <h3>Correo Electrónico Corporativo*</h3>
+  <mat-form-field>
+    <mat-label>despacho+"&#64;"+empresa.com </mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <h3>Contraseña*</h3>
+  <mat-form-field>
+    <mat-label>********</mat-label>
+    <input matInput [type]="hide() ? 'password' : 'text'">
+    <button
+      matIconButton
+      matSuffix
+      (click)="clickEvent($event)"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide()"
+    >
+      <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-button></mat-button>
+
+</div>

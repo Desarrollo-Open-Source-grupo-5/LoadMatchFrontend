@@ -1,1 +1,42 @@
-<p>transp-register works!</p>
+<div>
+  <h3>DNI o Carné de Extranjería*</h3>
+  <mat-form-field>
+    <mat-label>Ej. 76543210</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <h3>Nombres y apellidos*</h3>
+  <mat-form-field>
+    <mat-label>Ej. Roberto Sanchez</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <h3>Número de Celular*</h3>
+  <mat-form-field>
+    <mat-label>+51 999 999 999</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <h3>Placa de Vehículo Principal*</h3>
+  <mat-form-field>
+    <mat-label>Ej. ABC-123</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <h3>Contraseña*</h3>
+  <mat-form-field>
+    <mat-label>********</mat-label>
+    <input matInput [type]="hide() ? 'password' : 'text'">
+    <button
+      matIconButton
+      matSuffix
+      (click)="clickEvent($event)"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide()"
+    >
+      <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-button></mat-button>
+</div>
